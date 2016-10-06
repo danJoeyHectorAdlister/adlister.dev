@@ -1,4 +1,12 @@
 <!--partial view for navbar-->
+
+<?php
+    require_once __DIR__ . "/../../utils/Auth.php";
+?>
+
+
+
+
  <nav id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">
@@ -10,36 +18,45 @@
                 </button>
                 <a class="navbar-brand page-scroll" href="/">Home</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li>
-                        <a class="page-scroll, pipe" href="items">Items</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll, pipe" href="login">Login</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll, pipe" href="signUp">Signup</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll, pipe" href="show">Item</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll, pipe" href="userAccount">Account</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll, pipe" href="createAd">Create Ad</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll, pipe" href="editItem">Edit Ad</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll, pipe," id="logout" href="logout">Logout</a>
-                    </li>
-                </ul>
+
+                <?php 
+                    if(Auth::check()){ ?>
+                        <ul class="nav navbar-nav">                    
+                        <li>
+                            <a class="page-scroll, pipe" href="items">Items</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll, pipe" href="userAccount">Account</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll, pipe" href="createAd">Create Ad</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll, pipe" href="editItem">Edit Ad</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll, pipe," id="logout" href="logout">Logout</a>
+                        </li>
+                    </ul>
+                <?php
+                    } else {
+                ?>
+                    <ul class="nav navbar-nav">                    
+                        <li>
+                            <a class="page-scroll, pipe" href="items">Items</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll, pipe" href="login">Login</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll, pipe" href="signUp">Signup</a>
+                        </li>
+                    </ul> 
+                <?php 
+                    } 
+                ?>
             </div>
             <!-- /.navbar-collapse -->
         </div>
