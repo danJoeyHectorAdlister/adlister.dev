@@ -6,3 +6,7 @@ body {
 }
 .navbar {
 	height: 60px;
+}
+.accountDiv {
+	background-color: lightgrey;
+}
