@@ -36,6 +36,9 @@
                     <li>
                         <a class="page-scroll, pipe" href="editItem">Edit Ad</a>
                     </li>
+                    <li>
+                        <a class="page-scroll, pipe," id="logout" href="logout">Logout</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
