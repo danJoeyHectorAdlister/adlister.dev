@@ -3,15 +3,10 @@ require_once __DIR__ . '/../utils/Auth.php';
 
 
 $name = Input::get('name');
-var_dump($name);
 $username = Input::get('userName');
-var_dump($username);
 $email = Input::get('email');
-var_dump($email);
 $password = Input::get('password');
-var_dump($password);
 $verifyPassword = Input::get('verifyPassword');
-var_dump($verifyPassword);
 
 if( (!empty($name) && !empty($username) && !empty($email) && !empty($password) && !empty($verifyPassword)) && ($password == $verifyPassword) ) {
 	$user = new User;
@@ -20,7 +15,7 @@ if( (!empty($name) && !empty($username) && !empty($email) && !empty($password) &
 	$user->email = $email;
 	$user->password = $password;
 	$user->save();
-	header("Location: http://adlister.dev/login");
+	header("Location: http://adlister.dev/items");
 } else {
 	var_dump("Invalid Parameters");
 }

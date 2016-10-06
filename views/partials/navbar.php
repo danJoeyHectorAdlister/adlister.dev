@@ -25,9 +25,6 @@
                         <a class="page-scroll, pipe" href="signUp">Signup</a>
                     </li>
                     <li>
-                        <a class="page-scroll, pipe" href="show">Item</a>
-                    </li>
-                    <li>
                         <a class="page-scroll, pipe" href="userAccount">Account</a>
                     </li>
                     <li>
