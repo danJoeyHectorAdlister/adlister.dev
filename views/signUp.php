@@ -20,6 +20,7 @@ if( (!empty($name) && !empty($username) && !empty($email) && !empty($password) &
 	$user->email = $email;
 	$user->password = $password;
 	$user->save();
+	header("Location: http://adlister.dev/login");
 } else {
 	var_dump("Invalid Parameters");
 }
