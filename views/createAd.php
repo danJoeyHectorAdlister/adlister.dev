@@ -1,7 +1,6 @@
 <div class="container col-sm-4 col-sm-offset-4">
 	<form>	
 		<div class="form-group">
-			<label>Title</label>
 			<input  class="form-control" placeholder="Title">
 		</div>
 		<div class="form-group">
@@ -13,6 +12,11 @@
 			<br>
 			<textarea class="form-control" rows="3" placeholder="Description"></textarea>
 		</div>
+		<div>
+		<h5>Select image for Ad.</h5>
+		<input type="file" name="pic" accept="image/*">
+		</div>
+  		<br>
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
 </div>
