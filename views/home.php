@@ -1,3 +1,18 @@
+<?php
+
+require_once __DIR__ . '/../models/Ad.php';
+
+require_once __DIR__ . '/../models/Model.php';
+
+require_once __DIR__ . '/../models/User.php';
+
+$ads = Ad::findFeaturedItem();
+
+
+
+?>
+
+
 <div class="container">
 
     <section id="welcome">
@@ -21,28 +36,39 @@
             <h1>SHUT UP AND TAKE MY MONEY!!!</h1>
             <h3 class="section-title">Featured Items</h3>
             <!-- Placeholder for featured items.-->
-            <div class="row">
-                <div class="col-sm-4">
-                    <img src="../img/predator.jpg" alt="Predator">
-                    <p><a href="">LED Predator Costume</a></p>
-                    <p class="featuredItem">Bring one of cinema’s most feared villains to life in a stunning way by dressing up in this LED predator costume. Composed of over 2,500 LEDs, this eye-catching ensemble is wireless and comes with a small controller that lets you control the lighting sequence.</p>
-                    
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/predator.jpg" alt="Predator">
-                    <p><a href="">LED Predator Costume</a></p>
-                    <p class="featuredItem">Bring one of cinema’s most feared villains to life in a stunning way by dressing up in this LED predator costume. Composed of over 2,500 LEDs, this eye-catching ensemble is wireless and comes with a small controller that lets you control the lighting sequence.</p>
-                    
-                </div>
-                <div class="col-sm-4">
-                    <img src="../img/predator.jpg" alt="Predator">
-                    <p><a href="">LED Predator Costume</a></p>
-                    <p class="featuredItem">Bring one of cinema’s most feared villains to life in a stunning way by dressing up in this LED predator costume. Composed of over 2,500 LEDs, this eye-catching ensemble is wireless and comes with a small controller that lets you control the lighting sequence.</p>
-                    
-                </div>
-                
-            </div>
+
         </div>
+
+ <div class="container">
+     <div class="row">
+    
+ 
+
+
+        <?php foreach ($ads->attributes as $attribute=>$value): ?>
+        
+        <div class="col-sm-6">
+            <a href="/show?id=<?= $value['id'] ?>"><img src="<?= $value['image_url']   ?>" height='100' width='125'></a>
+            <br>
+            <p><?= $value['name']; ?></p>
+            <p class="featurdItem"><?= $value['description']; ?></p>
+            <p><?= $value['price']; ?></p>
+            <br>    
+            <a href="<?= $value['url'] ?>"><?= $value['url'] ?></a>
+
+        </div>
+
+        <?php endforeach;?>
+
+
+
+
+
+
+
+                    
+    </div>
+</div>
 
     </section>
 

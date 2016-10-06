@@ -20,7 +20,7 @@ class Ad extends Model {
         $stmt->execute();
 
         //Store the resultset in a variable named $result
-        $results = $stmt->fetch(PDO::FETCH_ASSOC);
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // The following code will set the attributes on the calling object based on the result variable's contents
 
@@ -41,16 +41,15 @@ class Ad extends Model {
 
         self::dbConnect();
 
-        $featured = 1;
 
-        $query = 'SELECT * FROM ' . self::$table . ' WHERE featured = :featured';
+        $query = 'SELECT * FROM ' . static::$table . ' WHERE featured = :featured';
 
         $stmt = self::$dbc->prepare($query);
-        $stmt->bindValue(':featured', $featured, PDO::PARAM_STR);
+        $stmt->bindValue(':featured', 1, PDO::PARAM_STR);
         $stmt->execute();
 
         //Store the resultset in a variable named $result
-        $results = $stmt->fetch(PDO::FETCH_ASSOC);
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // The following code will set the attributes on the calling object based on the result variable's contents
 
@@ -65,6 +64,8 @@ class Ad extends Model {
 
         return $instance;
     }
+
+    
 
 }
 

@@ -11,7 +11,6 @@ require_once __DIR__ . '/../models/User.php';
 
 $ads = Ad::all();
 
-var_dump($ads);
 
 ?>
 
@@ -25,7 +24,7 @@ var_dump($ads);
         <?php foreach ($ads->attributes as $attribute=>$value): ?>
         
         <div class="col-sm-6">
-            <img src="<?= $value['image_url']   ?>" height='100' width='125'>
+            <a href="/show?id=<?= $value['id'] ?>"><img src="<?= $value['image_url']   ?>" height='100' width='125'></a>
             <br>
             <p><?= $value['name']; ?></p>
             <p class="featurdItem"><?= $value['description']; ?></p>
