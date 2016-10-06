@@ -7,6 +7,7 @@ if (!Auth::check()) {
 }
 
 ?>
+
 <br><br>
 <div class="container well span6 col-sm-4 col-sm-offset-4">
 	<div class="row">
@@ -26,8 +27,7 @@ if (!Auth::check()) {
             <h6>insert ads here</h6>
             <h6>insert ads here</h6>    
             <button type="button" class="btn btn-primary">Edit Ads</button>
-        </div>
-        
-       
-</div>
+        </div>  
+	</div>
+
 </div>
