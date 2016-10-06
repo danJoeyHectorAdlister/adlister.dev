@@ -10,7 +10,7 @@ $password = Input::get('password');
 // check credentials
 if ((!empty($username)) && (!empty($password)))
 	if (Auth::attempt($username, $password)) {
-		header("Location: http://adlister.dev/userAccount");
+		header("Location: http://adlister.dev/items");
 		die;
 	} else {
 		var_dump("Enter correct username and password");
