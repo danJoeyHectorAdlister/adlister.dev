@@ -52,6 +52,9 @@ function pageController()
         case '/editItem':
             $main_view = '../views/editItem.php';
             break;
+        case '/logout':
+            $main_view = '../views/logout.php';
+            break;
 
         default:    // displays 404 if route not specified above
             $main_view = '../views/404.php';

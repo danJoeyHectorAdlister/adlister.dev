@@ -21,6 +21,11 @@
 			<br>
 			<textarea class="form-control" rows="3" placeholder="Description" name="description"></textarea>
 		</div>
+		<div>
+		<h5>Select image for Ad.</h5>
+		<input type="file" name="pic" accept="image/*">
+		</div>
+		<br>
 		<button type="submit" class="btn btn-primary">Update</button>
 	</form>
 </div>
