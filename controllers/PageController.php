@@ -51,6 +51,7 @@ function pageController()
             break;
         case '/editItem':
             $main_view = '../views/editItem.php';
+            break;
         case '/logout':
             $main_view = '../views/logout.php';
             break;

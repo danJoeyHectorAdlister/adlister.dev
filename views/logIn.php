@@ -15,8 +15,6 @@ if ((!empty($username)) && (!empty($password)))
 	} else {
 		var_dump("Enter correct username and password");
 	}
-	var_dump($_SESSION);
-
 ?>
 
 
