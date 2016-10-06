@@ -13,7 +13,7 @@ $query = 'CREATE TABLE ads (
     url VARCHAR(255),
     image_url VARCHAR(255),
     featured TINYINT NOT NULL,
-    user_id INT UNSIGNED NOT NULL,
+    user_id INT UNSIGNED,
     FOREIGN KEY (user_id) REFERENCES users(id),
     PRIMARY KEY (id)
 )';
