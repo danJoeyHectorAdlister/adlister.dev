@@ -8,8 +8,6 @@ require_once __DIR__ . '/../models/User.php';
 
 $ads = Ad::findFeaturedItem();
 
-
-
 ?>
 
 
@@ -48,21 +46,20 @@ $ads = Ad::findFeaturedItem();
         <?php foreach ($ads->attributes as $attribute=>$value): ?>
         
         <div class="col-sm-6">
-            <a href="/show?id=<?= $value['id'] ?>"><img src="<?= $value['image_url']   ?>" height='100' width='125'></a>
+            <a href="/show?id=<?= $value['id'] ?>"><img src="<?= $value['image_url']   ?>" height='252' width='302'></a>
             <br>
-            <p><?= $value['name']; ?></p>
-            <p class="featurdItem"><?= $value['description']; ?></p>
-            <p><?= $value['price']; ?></p>
+            <h4><?= $value['name']; ?></h4>
+            <p class="featuredItem"><?= $value['description']; ?></p>
+            <p>$<?= $value['price']; ?></p>
             <br>    
             <a href="<?= $value['url'] ?>"><?= $value['url'] ?></a>
-
         </div>
 
         <?php endforeach;?>
 
 
 
-
+    
 
 
 

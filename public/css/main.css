@@ -2,11 +2,9 @@ body {
     padding-top: 100px; 
 }
 .featuredItem {
-	width:200px;
+	width:302px;
 }
 .navbar {
 	height: 60px;
 }
-.accountDiv {
-	background-color: lightgrey;
-}
+
