@@ -4,7 +4,7 @@ require_once __DIR__ . '/../../models/Ad.php';
 
 $ad = new Ad;
 $ad->name = 'Gold Toilet Paper';
-$ad->description = 'description:When wiping with regular hundred dollar bills becomes too pedestrian, why not try gold toilet paper? You’ll get the Midas touch every time you wipe. This regal roll of T.P. comes coated in 22 carat gold and provides your bathroom with a touch of gratuitous wealth.';
+$ad->description = 'When wiping with regular hundred dollar bills becomes too pedestrian, why not try gold toilet paper? You’ll get the Midas touch every time you wipe. This regal roll of T.P. comes coated in 22 carat gold and provides your bathroom with a touch of gratuitous wealth.';
 $ad->price = 1376900.00;
 $ad->url ="";
 $ad->image_url = "http://cdn.thisiswhyimbroke.com/images/gold-toilet-paper-300x250.jpg";
@@ -18,7 +18,7 @@ $ad->description = 'Own a piece of cinematic history with the actual raptor cage
 $ad->price = 99000.00;
 $ad->url = "";
 $ad->image_url = "http://cdn.thisiswhyimbroke.com/images/jurassic-park-raptor-cage-300x250.jpg";
-$ad->featured = 1;
+$ad->featured = 0;
 $ad->user_id = 2;
 $ad->save();
 
@@ -28,7 +28,7 @@ $ad->description = 'Own a piece of cinematic history with the actual raptor cage
 $ad->price = 99000.00;
 $ad->url = "";
 $ad->image_url = "http://cdn.thisiswhyimbroke.com/images/flying-rc-fire-breathing-dragon-300x250.jpg";
-$ad->featured = 1;
+$ad->featured = 0;
 $ad->user_id = 2;
 $ad->save();
 
@@ -38,7 +38,7 @@ $ad->description = 'Hot tub boats are all the rage these days, but now you can r
 $ad->price = 42000.00;
 $ad->url = "";
 $ad->image_url = "http://cdn.thisiswhyimbroke.com/images/electric-hot-tub-boat1-300x250.jpg";
-$ad->featured = 1;
+$ad->featured = 0;
 $ad->user_id = 2;
 $ad->save();
 
@@ -58,7 +58,7 @@ $ad->description = 'Relive your glorious childhood all over again by getting beh
 $ad->price = 33248.00;
 $ad->url = "";
 $ad->image_url = "http://cdn.thisiswhyimbroke.com/images/transparent-pool-table1-300x250.jpg";
-$ad->featured = 1;
+$ad->featured = 0;
 $ad->user_id = 2;
 $ad->save();
 
@@ -68,7 +68,7 @@ $ad->description = 'Whoever said “never bring a knife to a gun fight” clearl
 $ad->price = 9500.00;
 $ad->url = "";
 $ad->image_url = "http://cdn.thisiswhyimbroke.com/images/worlds-largest-switch-blade-300x250.jpg";
-$ad->featured = 1;
+$ad->featured = 0;
 $ad->user_id = 2;
 $ad->save();
 
@@ -78,7 +78,7 @@ $ad->description = 'Make your home shine with the glow of a thousand gummies upo
 $ad->price = 6500.00;
 $ad->url = "";
 $ad->image_url = "http://cdn.thisiswhyimbroke.com/images/gummy-bear-chandelier-300x250.jpg";
-$ad->featured = 1;
+$ad->featured = 0;
 $ad->user_id = 2;
 $ad->save();
 
@@ -88,7 +88,7 @@ $ad->description = 'This gumball machine holds over 14,000 gumballs. Standing an
 $ad->price = 3900.00;
 $ad->url = "";
 $ad->image_url = "http://cdn.thisiswhyimbroke.com/images/14000-gumball-machine1-300x250.jpg";
-$ad->featured = 1;
+$ad->featured = 0;
 $ad->user_id = 3;
 $ad->save();
 
@@ -108,7 +108,7 @@ $ad->description = 'description:Become top dog of the asphalt while riding atop 
 $ad->price = 2000.00;
 $ad->url = "";
 $ad->image_url = "http://cdn.thisiswhyimbroke.com/images/trex-skeleton-trike-300x250.jpg";
-$ad->featured = 1;
+$ad->featured = 0;
 $ad->user_id = 2;
 $ad->save();
 
@@ -118,7 +118,7 @@ $ad->description = 'If you were told you could take only one item with you to a 
 $ad->price = 1310.00;
 $ad->url = "";
 $ad->image_url = "http://cdn.thisiswhyimbroke.com/images/ultimate-swiss-army-knife1-300x250.jpg";
-$ad->featured = 1;
+$ad->featured = 0;
 $ad->user_id = 4;
 $ad->save();
 
@@ -128,7 +128,7 @@ $ad->description = 'Stay ahead of your competition and keep your skills sharp us
 $ad->price = 1300.00;
 $ad->url = "";
 $ad->image_url = "http://cdn.thisiswhyimbroke.com/images/curved-ping-pong-table-300x250.jpg";
-$ad->featured = 1;
+$ad->featured = 0;
 $ad->user_id = 2;
 $ad->save();
 
