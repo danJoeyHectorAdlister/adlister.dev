@@ -1,3 +1,13 @@
+<?php
+require_once __DIR__ . "/../utils/Auth.php";
+
+if (!Auth::check()) {
+	header("Location: http://adlister.dev/login");
+	die;
+}
+
+?>
+
 <div class="container">
 	<div class="col-sm-6 col-sm-offset-5">
 		<h3>User Info<h3>
