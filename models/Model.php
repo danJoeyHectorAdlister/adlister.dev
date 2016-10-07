@@ -198,7 +198,9 @@ class Model {
         $stmt->execute();
 
         //Store the resultset in a variable named $result
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        // I had to change the original code from fetch to fetchAll as that was the
+        // only way to make this work -Dan
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
         // The following code will set the attributes on the calling object based on the result variable's contents
 

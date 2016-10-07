@@ -25,19 +25,16 @@
                     if(Auth::check()){ ?>
                         <ul class="nav navbar-nav">                    
                         <li>
-                            <a class="page-scroll, pipe" href="items">Items</a>
+                            <a class="page-scroll pipe active" href="items">Items</a>
                         </li>
                         <li>
-                            <a class="page-scroll, pipe" href="userAccount">Account</a>
+                            <a class="page-scroll pipe active" href="userAccount">Account</a>
                         </li>
                         <li>
-                            <a class="page-scroll, pipe" href="createAd">Create Ad</a>
+                            <a class="page-scroll pipe active" href="createAd">Create Ad</a>
                         </li>
                         <li>
-                            <a class="page-scroll, pipe" href="editItem">Edit Ad</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll, pipe," id="logout" href="logout">Logout</a>
+                            <a class="page-scroll pipe active" id="logout" href="logout">Logout</a>
                         </li>
                     </ul>
                 <?php
@@ -45,13 +42,13 @@
                 ?>
                     <ul class="nav navbar-nav">                    
                         <li>
-                            <a class="page-scroll, pipe" href="items">Items</a>
+                            <a class="page-scroll pipe active" href="items">Items</a>
                         </li>
                         <li>
-                            <a class="page-scroll, pipe" href="login">Login</a>
+                            <a class="page-scroll pipe active" href="login">Login</a>
                         </li>
                         <li>
-                            <a class="page-scroll, pipe" href="signUp">Signup</a>
+                            <a class="page-scroll pipe active" href="signUp">Signup</a>
                         </li>
                     </ul> 
                 <?php 
