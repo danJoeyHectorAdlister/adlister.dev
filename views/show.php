@@ -15,7 +15,16 @@ if (isset($_REQUEST['id'])) {
      $id = $_REQUEST['id'];
  } 
 
-$ads = Ad::find($id);
+
+$ad = Ad::find($id);
+
+if (isset($_REQUEST['ad_delete'])) {
+    $ad->delete();
+}
+
+
+$conditionForDeleteUser = isset($_SESSION['LOGGED_IN_ID'])
+&&$_SESSION['LOGGED_IN_ID'] == $ad->attributes['user_id'];
 
 ?>
 
@@ -27,22 +36,33 @@ $ads = Ad::find($id);
 <!-- This for each loop will go through all items with id and display them
 since only one item can be clicked on at a time it will always only be one -->
 
-        <?php foreach ($ads->attributes as $attribute=>$value): ?>
 
 
         
         <div class="col-sm-6">
-            <img src="<?= $value['image_url']   ?>" height='100' width='125'>
+            <img src="<?= $ad->image_url   ?>" height='100' width='125'>
             <br>
-            <p><?= $value['name']; ?></p>
-            <p class="featurdItem"><?= $value['description']; ?></p>
-            <p><?= $value['price']; ?></p>
+            <p><?= $ad->name; ?></p>
+            <p class="featurdItem"><?= $ad->description ?></p>
+            <p><?= $ad->price; ?></p>
             <br>    
-            <a href="<?= $value['url'] ?>"><?= $value['url'] ?></a>
+            <a href="<?= $ad->url ?>"><?= $ad->url ?></a>
+
+<?php if ($conditionForDeleteUser): ?>
+
+            <form method="POST">
+                
+                <input name="ad_delete" type="hidden" value="<?= $_REQUEST['id'] ?>">
+
+                <button type="submit" class="btn btn-primary">Delete</button>
+
+            </form>
+
+<?php endif; ?>
+
 
         </div>
 
-        <?php endforeach;?>
 
 
 
