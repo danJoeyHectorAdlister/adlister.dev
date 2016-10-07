@@ -2,7 +2,7 @@
 require_once __DIR__ . "/../utils/Auth.php";
 require_once __DIR__ . "/../utils/Input.php";
 require_once __DIR__ . "/../models/User.php";
-
+require_once __DIR__ . "/../models/Ad.php";
 if (!Auth::check()) {
 	header("Location: http://adlister.dev/login");
 	die;
@@ -31,6 +31,14 @@ if( (!empty($name) && !empty($username) && !empty($email) && !empty($password) &
 	$username = $user->attributes['username'];
 	$email = $user->attributes['email'];
 	$name = $user->attributes['name'];
+
+
+// ******************************************************************************************************
+
+$ownerOfItem = Auth::id();
+$userItem = Ad::findItemByUserId($ownerOfItem);
+var_dump($userItem);
+
 
 
 ?>
