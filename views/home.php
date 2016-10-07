@@ -30,8 +30,7 @@ $ads = Ad::findFeaturedItem();
     <section id="features">
 
         <div class="row">
-
-            <h1>SHUT UP AND TAKE MY MONEY!!!</h1>
+            <h1 class="">SHUT UP AND TAKE MY MONEY!!!</h1>
             <h3 class="section-title">Featured Items</h3>
             <!-- Placeholder for featured items.-->
 
@@ -45,7 +44,7 @@ $ads = Ad::findFeaturedItem();
 
         <?php foreach ($ads->attributes as $attribute=>$value): ?>
         
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <a href="/show?id=<?= $value['id'] ?>"><img src="<?= $value['image_url']   ?>" height='252' width='302'></a>
             <br>
             <h4><?= $value['name']; ?></h4>
