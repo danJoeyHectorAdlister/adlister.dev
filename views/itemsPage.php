@@ -23,20 +23,30 @@ $ads = Ad::all();
  
 <!-- This for each loop loops through all items in db and displays them -->
 
+       
         <?php foreach ($ads->attributes as $attribute=>$value): ?>
         
-        <div class="col-sm-4">
-            <a href="/show?id=<?= $value['id'] ?>"><img src="<?= $value['image_url']   ?>" height='252' width='302'></a>
-            <br>
-            <p><?= $value['name']; ?></p>
-            <p class="featuredItem"><?= $value['description']; ?></p>
-            <p>$<?= $value['price']; ?></p>
-            <br>    
-            <a href="<?= $value['url'] ?>"><?= $value['url'] ?></a>
+        <div class="col-sm-4 editThis animated slideInUp ">
 
+            <a href="/show?id=<?= $value['id'] ?>"><img class="shadow" src="<?= $value['image_url'] ?>" height='252' width='302'></a>
+            
+            
+            <div class="itemInfoBox">
+                <!-- <div class="itemInfo"> -->
+                    
+                    <h4 class="itemName"><?= $value['name']; ?></h4>
+                    <p class="description"><?= $value['description']; ?></p>
+                    <h5>$<?= $value['price']; ?></h5>
+                       
+                    <h4><a href="<?= $value['url'] ?>"><?= $value['url'] ?></a></h4>
+                </div>
+            <!-- </div> -->
         </div>
 
+
         <?php endforeach;?>
+        <br>
+        <br>
 
 
 
