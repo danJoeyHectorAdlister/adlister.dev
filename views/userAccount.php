@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/../utils/Auth.php";
+require_once __DIR__ . "/../models/User.php";
 
 if (!Auth::check()) {
 	header("Location: http://adlister.dev/login");
@@ -17,9 +18,27 @@ if (!Auth::check()) {
         
         <div class="span8 text-center">
             <h3>Account</h3>
-            <h6>Username: YourNameHere</h6>
-            <h6>Email: MyEmail@servidor.com</h6>
-            <h6>Password: password</h6>  
+       	<?php 
+       		$users = Auth::user(); 
+       		foreach ($users as $user): 
+       			$username = $user['username'];
+       	?>
+            	<h6>Username: <?= $username; ?></h6>
+       			
+       	<?php
+       		endforeach;
+       	?>
+
+        <?php 
+       		$users = Auth::user(); 
+       		foreach ($users as $user): 
+       			$email = $user['email'];
+       	?>
+            	<h6>Email: <?= $email; ?></h6>
+       			
+       	<?php
+       		endforeach;
+       	?>
             <button type="button" class="btn btn-primary">Edit Profile</button>  
         </div>
         <div class="span8 text-center">
@@ -31,3 +50,4 @@ if (!Auth::check()) {
 	</div>
 
 </div>
+
