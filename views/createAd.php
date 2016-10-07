@@ -35,6 +35,7 @@ if ($conditionsForEntry) {
 	$ad->price=Input::get('price');
 	$ad->image_url = $imageUrl;
 	$ad->featured = 0;
+	// $ad->user_id = Auth;
 	$ad->save();
 
 }
