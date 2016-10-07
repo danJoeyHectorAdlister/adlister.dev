@@ -47,7 +47,6 @@ $errorAlertVar = true;
 ads attributes -->
 
 
-
 <div class="container col-sm-4 col-sm-offset-4">
 	<form method="POST" enctype="multipart/form-data">	
 		<div class="form-group">
