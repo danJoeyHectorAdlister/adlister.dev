@@ -1,33 +1,77 @@
 body { 
-	background-color: #EBECED;
+	background-color: #686963;
     padding-top: 100px; 
 }
 .featuredItem {
 	width:302px;
 }
 .navbar {
-	height: 60px;
+	max-height: 60px;
+	background-color: #D9DADB;
+	padding-bottom: 0px;
 }
 .homeTitle{
-	color: #363738;
-	margin-top: 25px;
+	color: #D9DBCE;
+} 
+.features {
+	color: #DB5461;
 }
+ 
+
+
+
 /*===================================Items CSS==============================*/
 	/*----------image css---------*/
 	.shadow {
-		box-shadow: 3px 6px 5px #888888;
+		margin: 10px;
+		margin-top: 30px;
+		box-shadow: 3px 6px 5px #494949;
 		border-radius: 10px;
 	}
 	.itemInfoBox {
+		margin-top: 0px;
+		margin-bottom: 5px;
+		margin-left: 10px;
+		margin-right: 10px;
 		width:305px;
 		height:250px;
-		background-color: darkgrey;
-		border-radius: 10px;
-		box-shadow: 3px 6px 5px #888888;
+		/*background-color: darkgrey;*/
+		/*border-radius: 10px;*/
+		/*box-shadow: 3px 6px 5px #888888;*/
+	}
+	.description{
+		/*color: #FAFAFA;*/
+
 	}
 	.itemInfo {
 		padding: 5px;
 		max-width: 290px;
 
+
+	}
+	.editThis {
+		background-color: #8AA29E;
+		/*min-height:500px;*/
+		max-height:520px;
+		border-radius: 10px;
+		margin:10px;
+		width: 350px;
 	}
 
+	/*========= show page css ========*/
+	.showPage {
+		background-color: #8AA29E;
+		/*min-height:500px;*/
+		max-height:520px;
+		border-radius: 10px;
+		margin:10px;
+			}
+	.showBox {
+		
+		margin-top: 0px;
+		margin-bottom: 5px;
+		margin-left: 10px;
+		margin-right: 10px;
+	/*	width:305px;
+		height:250px;*/
+	}

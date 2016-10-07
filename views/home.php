@@ -35,7 +35,7 @@ $ads = Ad::findFeaturedItem();
 
         <div class="row">
             <h1 class="animated bounceIn homeTitle">SHUT UP AND TAKE MY MONEY!!!</h1>
-            <h3 class="section-title">Featured Items</h3>
+            <h3 class="section-title features">Featured Items</h3>
             <!-- Placeholder for featured items.-->
 
         </div>
@@ -49,20 +49,21 @@ $ads = Ad::findFeaturedItem();
 
         <?php foreach ($ads->attributes as $attribute=>$value): ?>
         
-        <div class="col-sm-4">
+        <div class="col-sm-4 editThis animated slideInUp ">
+
             <a href="/show?id=<?= $value['id'] ?>"><img class="shadow" src="<?= $value['image_url'] ?>" height='252' width='302'></a>
-            <br>
-            <br>
-            <div class="itemInfoBox">
-                <div class="itemInfo">
+            
+            
+                <div class="itemInfoBox">
+                <!-- <div class="itemInfo"> -->
                     
-                    <h4><?= $value['name']; ?></h4>
-                    <p class=""><?= $value['description']; ?></p>
-                    <p>$<?= $value['price']; ?></p>
+                    <h4 class="itemName"><?= $value['name']; ?></h4>
+                    <p class="description"><?= $value['description']; ?></p>
+                    <h5>$<?= $value['price']; ?></h5>
                        
-                    <a href="<?= $value['url'] ?>"><?= $value['url'] ?></a>
+                    <h4><a href="<?= $value['url'] ?>"><?= $value['url'] ?></a></h4>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
 
 
