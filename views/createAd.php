@@ -46,17 +46,6 @@ $errorAlertVar = true;
 <!-- the names of all the input fields match the POST keys necessary to set an
 ads attributes -->
 
-<?php if ($errorAlertVar): ?>
-
-            <form method="POST">
-                
-                <input name="ad_delete" type="hidden" value="<?= $_REQUEST['id'] ?>">
-
-                <button type="submit" class="btn btn-primary">Delete</button>
-
-            </form>
-
-<?php endif; ?>
 
 <div class="container col-sm-4 col-sm-offset-4">
 	<form method="POST" enctype="multipart/form-data">	
