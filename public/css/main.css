@@ -1,4 +1,5 @@
 body { 
+	background-color: #EBECED;
     padding-top: 100px; 
 }
 .featuredItem {
@@ -7,4 +8,26 @@ body {
 .navbar {
 	height: 60px;
 }
+.homeTitle{
+	color: #363738;
+	margin-top: 25px;
+}
+/*===================================Items CSS==============================*/
+	/*----------image css---------*/
+	.shadow {
+		box-shadow: 3px 6px 5px #888888;
+		border-radius: 10px;
+	}
+	.itemInfoBox {
+		width:305px;
+		height:250px;
+		background-color: darkgrey;
+		border-radius: 10px;
+		box-shadow: 3px 6px 5px #888888;
+	}
+	.itemInfo {
+		padding: 5px;
+		max-width: 290px;
+
+	}
 
