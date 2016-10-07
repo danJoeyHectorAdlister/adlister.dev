@@ -3,11 +3,6 @@
           
 // make the necessary requirements
 
-require_once __DIR__ . '/../models/Ad.php';
-
-require_once __DIR__ . '/../models/Model.php';
-
-require_once __DIR__ . '/../models/User.php';
 
 // This conditional makes sure the id of the item selected is set
 
@@ -20,6 +15,8 @@ $ad = Ad::find($id);
 
 if (isset($_REQUEST['ad_delete'])) {
     $ad->delete();
+    header('Location: http://adlister.dev/');
+    exit;
 }
 
 
