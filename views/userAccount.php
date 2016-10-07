@@ -3,18 +3,20 @@ require_once __DIR__ . "/../utils/Auth.php";
 require_once __DIR__ . "/../utils/Input.php";
 require_once __DIR__ . "/../models/User.php";
 require_once __DIR__ . "/../models/Ad.php";
+// verifies that user is logged in. If not logged in, sends them to login page
 if (!Auth::check()) {
 	header("Location: http://adlister.dev/login");
 	die;
 }
 
+// receives info from form
 $name = Input::get('name');
 $username = Input::get('userName');
 $email = Input::get('email');
 $password = Input::get('password');
 $verifyPassword = Input::get('verifyPassword');
 
-
+// places info from form into User database. Also retrieves user session id. If info does not match current table info, then table is updated
 if( (!empty($name) && !empty($username) && !empty($email) && !empty($password) && !empty($verifyPassword)) && ($password == $verifyPassword) ) {
 	$user = new User;
 	$user->name = $name;
@@ -27,19 +29,17 @@ if( (!empty($name) && !empty($username) && !empty($email) && !empty($password) &
 	// var_dump("Invalid Parameters");
 }
 
-	$user = User::find($_SESSION['LOGGED_IN_ID']);
-	$username = $user->attributes['username'];
-	$email = $user->attributes['email'];
-	$name = $user->attributes['name'];
+// variables created to represent current user info
+$user = User::find($_SESSION['LOGGED_IN_ID']);
+$username = $user->attributes['username'];
+$email = $user->attributes['email'];
+$name = $user->attributes['name'];
 
 
-// ******************************************************************************************************
+// *************************************** variables created that find item by user ***************************************************************
 
 $ownerOfItem = Auth::id();
 $userItem = Ad::findItemByUserId($ownerOfItem);
-var_dump($userItem);
-
-
 
 ?>
 
@@ -67,45 +67,18 @@ var_dump($userItem);
 						<h4 class="modal-title" id="myModalLabel">Update Profile</h4>
 					</div>
 					<div class="modal-body">
-						<form method="POST">
-
-			
-						<div class="form-group">
-							<label>Name</label>
-							<input class="form-control" name="name" placeholder="Name" value="<?php echo $name ?>">
-						</div>
-						<div class="form-group">
-							<label>User Name</label>
-							<input class="form-control" name="userName" placeholder="Username" value="<?php echo $username ?>">
-						</div>
-						<div class="form-group">
-							<label>Email address</label>
-							<input type="email" class="form-control" name="email" id="InputEmail" placeholder="Email" value="<?php echo $email ?>">
-						</div>
-						<div class="form-group">
-							<label>Password</label>
-							<input type="password" class="form-control" name="password" id="InputPassword" placeholder="Password" value="echo here">
-						</div>
-						<div class="form-group">
-							<label>Verify Password</label>
-							<input type="password" class="form-control" name="verifyPassword" id="VerifyPassword" placeholder="Password" value="echo here">
-						</div>
-
-						<?php
-							// endforeach;
-						?>
-
-						<!-- 	<div class="form-group">
+						<form method="POST">				
+							<div class="form-group">
 								<label>Name</label>
-								<input class="form-control" name="name" placeholder="Name" value="echo here">
+								<input class="form-control" name="name" placeholder="Name" value="<?php echo $name ?>">
 							</div>
 							<div class="form-group">
 								<label>User Name</label>
-								<input class="form-control" name="userName" placeholder="Username" value="echo here">
+								<input class="form-control" name="userName" placeholder="Username" value="<?php echo $username ?>">
 							</div>
 							<div class="form-group">
 								<label>Email address</label>
-								<input type="email" class="form-control" name="email" id="InputEmail" placeholder="Email" value="echo here">
+								<input type="email" class="form-control" name="email" id="InputEmail" placeholder="Email" value="<?php echo $email ?>">
 							</div>
 							<div class="form-group">
 								<label>Password</label>
@@ -114,37 +87,39 @@ var_dump($userItem);
 							<div class="form-group">
 								<label>Verify Password</label>
 								<input type="password" class="form-control" name="verifyPassword" id="VerifyPassword" placeholder="Password" value="echo here">
-							</div> -->
-
-							<!-- ****************************************************************************************** -->
-
+							</div>
 							<button type="submit" class="btn btn-primary">Submit</button>
 						</form>
 					</div>
-					<!-- submit button at the footer of modal.  -->
-			 <!-- <div class="modal-footer">
-			   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			   <button type="button" class="btn btn-primary">Save changes</button>
-			</div> -->
+				</div>
+			</div>
 		</div>
+		<div class="span8 text-center">
+			<h3>Your Ads</h3> 
+
+	<div class="container">
+		<div class="row">
+			<!-- This for each loop loops through all items in db and displays them -->
+			<?php foreach ($userItem->attributes as $attribute=>$value): ?>
+			<div class="col-sm-5">
+				<br>
+			<a href="/show?id=<?= $value['id'] ?>"><img src="<?= $value['image_url']   ?>" height='252' width='302'></a>
+
+			<p> <?= $value['name']; ?> </p>	
+				<p class="featuredItem"><?= $value['description']; ?></p>
+				<p>$<?= $value['price']; ?></p>
+				<br>    
+				<a href="<?= $value['url'] ?>"><?= $value['url'] ?></a>
+			</div>
+		<?php endforeach;?>                 
 	</div>
 </div>
-<div class="span8 text-center">
-	<h3>Your Ads</h3>
-	<h6>insert ads here</h6>
-	<h6>insert ads here</h6>    
-	<button type="button" class="btn btn-primary">Edit Ads</button>
+
+<button type="button" class="btn btn-primary">Edit Ads</button>
 </div>  
 </div>
 </div>
 
-
-<!-- Button trigger modal -->
-<!-- <div class="container">
-  <button type="button" class="btn btn-primary btn-lg col-sm-4 col-sm-offset-4" data-toggle="modal" data-target="#myModal">
-   Edit Profile
-  </button>
-</div> -->
 
 
 
