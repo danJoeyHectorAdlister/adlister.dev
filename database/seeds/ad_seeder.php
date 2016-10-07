@@ -25,7 +25,7 @@ $ad->save();
 $ad = new Ad;
 $ad->name = 'R/C Flying Fire Breathing Dragon';
 $ad->description = 'Have you ever wished upon a star to become a modern day mother of dragons? Well now your wish can come true! The remote controlled jet-powered dragon soars through the air at up to 70 mph and belches propane-powered flame while on the ground.';
-$ad->price = 99000.00;
+$ad->price = 60000.00;
 $ad->url = "";
 $ad->image_url = "http://cdn.thisiswhyimbroke.com/images/flying-rc-fire-breathing-dragon-300x250.jpg";
 $ad->featured = 0;

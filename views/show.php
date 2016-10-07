@@ -32,10 +32,10 @@ since only one item can be clicked on at a time it will always only be one -->
 
         
         <div class="col-sm-6">
-            <img src="<?= $value['image_url']   ?>" height='100' width='125'>
+            <img src="<?= $value['image_url']   ?>" height='252' width='302'>
             <br>
             <p><?= $value['name']; ?></p>
-            <p class="featurdItem"><?= $value['description']; ?></p>
+            <p class="featuredItem"><?= $value['description']; ?></p>
             <p><?= $value['price']; ?></p>
             <br>    
             <a href="<?= $value['url'] ?>"><?= $value['url'] ?></a>
