@@ -28,9 +28,9 @@ if( (!empty($name) && !empty($username) && !empty($email) && !empty($password) &
 }
 
 	$user = User::find($_SESSION['LOGGED_IN_ID']);
-	$username = $user->attributes[0]['username'];
-	$email = $user->attributes[0]['email'];
-	$name = $user->attributes[0]['name'];
+	$username = $user->attributes['username'];
+	$email = $user->attributes['email'];
+	$name = $user->attributes['name'];
 
 
 ?>
