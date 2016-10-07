@@ -1,13 +1,7 @@
 <?php
 
           
-// make the necessary requirements
 
-require_once __DIR__ . '/../models/Ad.php';
-
-require_once __DIR__ . '/../models/Model.php';
-
-require_once __DIR__ . '/../models/User.php';
 
 // This conditional makes sure the id of the item selected is set
 
@@ -19,6 +13,8 @@ $ad = Ad::find($id);
 
 if (isset($_REQUEST['ad_delete'])) {
     $ad->delete();
+    header('Location: http://adlister.dev/');
+    exit;
 }
 
 $conditionForDeleteUser = isset($_SESSION['LOGGED_IN_ID'])
@@ -54,8 +50,19 @@ since only one item can be clicked on at a time it will always only be one -->
 
 <?php endif; ?>
 
+<?php if ($conditionForDeleteUser): ?>
 
-        </div>                  
+
+                
+                <a href="http://adlister.dev/editItem?id=<?= $ad->id ?>">Edit</a>
+
+
+
+<?php endif; ?>
+
+
+        </div>
+
     </div>
 </div>
 

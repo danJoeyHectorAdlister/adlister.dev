@@ -1,22 +1,17 @@
 <?php
 
-require_once __DIR__ . '/../utils/helper_functions.php';
+// this variable will set alert
 
-require_once __DIR__ . '/../utils/Input.php';
-
-
-require_once __DIR__ . '/../models/Ad.php';
-
-require_once __DIR__ . '/../models/Model.php';
-
-require_once __DIR__ . '/../models/User.php';
+$errorAlertVar = false;
 
 // this variable stores all the conditions that must be true for an ad to be added
 
+
+
 $conditionsForEntry = 
-	!empty(Input::has('name'))
-	&&!empty(Input::has('price'))
-	&&!empty(Input::has('description'))
+	!empty(Input::get('name'))
+	&&!empty(Input::get('price'))
+	&&!empty(Input::get('description'))
 	&&isset($_POST);
 
 // if the conditions are true, a new ad object is made and its attributes 
@@ -25,8 +20,7 @@ $conditionsForEntry =
 
 if ($conditionsForEntry) {
 	$imageUrl = saveUploadedImage('pic');
-
-	var_dump($imageUrl);
+	$userId = Auth::id();
 
 	$ad = new Ad;
 
@@ -35,8 +29,11 @@ if ($conditionsForEntry) {
 	$ad->price=Input::get('price');
 	$ad->image_url = $imageUrl;
 	$ad->featured = 0;
-	// $ad->user_id = Auth;
+	$ad->user_id = $userId;
 	$ad->save();
+
+}else{
+$errorAlertVar = true;
 
 }
 
@@ -48,6 +45,7 @@ if ($conditionsForEntry) {
 
 <!-- the names of all the input fields match the POST keys necessary to set an
 ads attributes -->
+
 
 <div class="container col-sm-4 col-sm-offset-4">
 	<form method="POST" enctype="multipart/form-data">	
