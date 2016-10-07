@@ -1,10 +1,14 @@
 <?php
 
+// All necessary files are required
+
 require_once __DIR__ . '/../models/Ad.php';
 
 require_once __DIR__ . '/../models/Model.php';
 
 require_once __DIR__ . '/../models/User.php';
+
+// This is calling the find featured item function set in the ad class
 
 $ads = Ad::findFeaturedItem();
 
@@ -43,7 +47,8 @@ $ads = Ad::findFeaturedItem();
      <div class="row">
     
  
-
+<!-- This for each loop will loop through the featured ads (in the db, they have
+    the featured column set to 1) -->
 
         <?php foreach ($ads->attributes as $attribute=>$value): ?>
         

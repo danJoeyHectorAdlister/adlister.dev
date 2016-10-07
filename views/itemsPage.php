@@ -1,6 +1,6 @@
  <?php
 
-          
+          // requirements made for other files necessary
 
 
 require_once __DIR__ . '/../models/Ad.php';
@@ -8,6 +8,8 @@ require_once __DIR__ . '/../models/Ad.php';
 require_once __DIR__ . '/../models/Model.php';
 
 require_once __DIR__ . '/../models/User.php';
+
+// call the all() method from the ad class to use the loop
 
 $ads = Ad::all();
 
@@ -19,7 +21,7 @@ $ads = Ad::all();
      <div class="row">
     
  
-
+<!-- This for each loop loops through all items in db and displays them -->
 
         <?php foreach ($ads->attributes as $attribute=>$value): ?>
         
