@@ -4,6 +4,7 @@ require_once __DIR__ . '/../utils/Auth.php';
 
 $username = Input::get('username');
 $password = Input::get('password');
+$alertVar = 0;
 
 
 
@@ -13,7 +14,7 @@ if ((!empty($username)) && (!empty($password)))
 		header("Location: http://adlister.dev/items");
 		die;
 	} else {
-		var_dump("Enter correct username and password");
+		$alertVar = 1;
 	}
 ?>
 
@@ -31,3 +32,11 @@ if ((!empty($username)) && (!empty($password)))
 	  <button type="submit" class="btn btn-primary">Submit</button>
 	</form>
 </div>
+
+<?php
+
+	if ($alertVar == 1) {
+		// echo alert dive
+	}
+
+<?
