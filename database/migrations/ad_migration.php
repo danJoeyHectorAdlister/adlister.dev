@@ -12,7 +12,7 @@ $query = 'CREATE TABLE ads (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     name VARCHAR(240) NOT NULL,
     description TEXT,
-    price decimal(10,2) NOT NULL,
+    price TEXT NOT NULL,
     url VARCHAR(255),
     image_url VARCHAR(255),
     featured TINYINT NOT NULL,
