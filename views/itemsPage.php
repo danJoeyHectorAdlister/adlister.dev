@@ -23,7 +23,7 @@ $ads = Ad::all();
 
         <?php foreach ($ads->attributes as $attribute=>$value): ?>
         
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <a href="/show?id=<?= $value['id'] ?>"><img src="<?= $value['image_url']   ?>" height='252' width='302'></a>
             <br>
             <p><?= $value['name']; ?></p>
