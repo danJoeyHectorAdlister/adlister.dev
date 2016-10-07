@@ -1,15 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../utils/helper_functions.php';
 
-require_once __DIR__ . '/../utils/Input.php';
-
-
-require_once __DIR__ . '/../models/Ad.php';
-
-require_once __DIR__ . '/../models/Model.php';
-
-require_once __DIR__ . '/../models/User.php';
 
 // this variable stores all the conditions that must be true for an ad to be added
 
@@ -25,8 +16,7 @@ $conditionsForEntry =
 
 if ($conditionsForEntry) {
 	$imageUrl = saveUploadedImage('pic');
-
-	var_dump($imageUrl);
+	$userId = Auth::id();
 
 	$ad = new Ad;
 
@@ -35,7 +25,7 @@ if ($conditionsForEntry) {
 	$ad->price=Input::get('price');
 	$ad->image_url = $imageUrl;
 	$ad->featured = 0;
-	// $ad->user_id = Auth;
+	$ad->user_id = $userId;
 	$ad->save();
 
 }
