@@ -63,7 +63,7 @@
 </form> -->
 
 
-<!-- <div class="container col-sm-4 col-sm-offset-4">
+<div class="container col-sm-4 col-sm-offset-4">
 	<form method="POST" action="" id="editItem">	
 		<div class="form-group">
 			<label>Title</label>
@@ -85,4 +85,4 @@
 		<br>
 		<button type="submit" class="btn btn-primary">Update</button>
 	</form>
-</div> -->
+</div>

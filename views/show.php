@@ -57,6 +57,17 @@ since only one item can be clicked on at a time it will always only be one -->
 <?php endif; ?>
 
 
+<?php if ($conditionForDeleteUser): ?>
+
+
+                
+                <a href="http://adlister.dev/editItem?id=<?= $ad->id ?>">Edit</a>
+
+
+
+<?php endif; ?>
+
+
         </div>
 
 
