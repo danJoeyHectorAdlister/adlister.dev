@@ -1,7 +1,6 @@
 <?php
 
           
-// make the necessary requirements
 
 
 // This conditional makes sure the id of the item selected is set

@@ -1,13 +1,17 @@
 <?php
 
+// this variable will set alert
 
+$errorAlertVar = false;
 
 // this variable stores all the conditions that must be true for an ad to be added
 
+
+
 $conditionsForEntry = 
-	!empty(Input::has('name'))
-	&&!empty(Input::has('price'))
-	&&!empty(Input::has('description'))
+	!empty(Input::get('name'))
+	&&!empty(Input::get('price'))
+	&&!empty(Input::get('description'))
 	&&isset($_POST);
 
 // if the conditions are true, a new ad object is made and its attributes 
@@ -28,6 +32,9 @@ if ($conditionsForEntry) {
 	$ad->user_id = $userId;
 	$ad->save();
 
+}else{
+$errorAlertVar = true;
+
 }
 
 
@@ -38,6 +45,18 @@ if ($conditionsForEntry) {
 
 <!-- the names of all the input fields match the POST keys necessary to set an
 ads attributes -->
+
+<?php if ($errorAlertVar): ?>
+
+            <form method="POST">
+                
+                <input name="ad_delete" type="hidden" value="<?= $_REQUEST['id'] ?>">
+
+                <button type="submit" class="btn btn-primary">Delete</button>
+
+            </form>
+
+<?php endif; ?>
 
 <div class="container col-sm-4 col-sm-offset-4">
 	<form method="POST" enctype="multipart/form-data">	
