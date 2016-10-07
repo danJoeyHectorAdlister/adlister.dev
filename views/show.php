@@ -1,13 +1,15 @@
 <?php
 
           
-
+// make the necessary requirements
 
 require_once __DIR__ . '/../models/Ad.php';
 
 require_once __DIR__ . '/../models/Model.php';
 
 require_once __DIR__ . '/../models/User.php';
+
+// This conditional makes sure the id of the item selected is set
 
 if (isset($_REQUEST['id'])) {
      $id = $_REQUEST['id'];
@@ -22,7 +24,8 @@ $ads = Ad::find($id);
      <div class="row">
     
  
-
+<!-- This for each loop will go through all items with id and display them
+since only one item can be clicked on at a time it will always only be one -->
 
         <?php foreach ($ads->attributes as $attribute=>$value): ?>
 

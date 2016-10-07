@@ -1,5 +1,8 @@
 <?php
 
+
+// This is the migrator for the ad table, includes files containing password and connect function to get into db
+
 $_ENV = include __DIR__ . '/../../.env.php';
 require_once '../db_connect.php';
 

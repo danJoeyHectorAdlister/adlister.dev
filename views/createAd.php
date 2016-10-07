@@ -11,7 +11,7 @@ require_once __DIR__ . '/../models/Model.php';
 
 require_once __DIR__ . '/../models/User.php';
 
-
+// this variable stores all the conditions that must be true for an ad to be added
 
 $conditionsForEntry = 
 	!empty(Input::has('name'))
@@ -19,6 +19,8 @@ $conditionsForEntry =
 	&&!empty(Input::has('description'))
 	&&isset($_POST);
 
+// if the conditions are true, a new ad object is made and its attributes 
+	// are set to whats in the fields
 
 
 if ($conditionsForEntry) {
@@ -43,6 +45,8 @@ if ($conditionsForEntry) {
 
 ?>
 
+<!-- the names of all the input fields match the POST keys necessary to set an
+ads attributes -->
 
 <div class="container col-sm-4 col-sm-offset-4">
 	<form method="POST" enctype="multipart/form-data">	

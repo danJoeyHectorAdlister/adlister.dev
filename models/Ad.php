@@ -7,7 +7,7 @@ class Ad extends Model {
     protected static $table = 'ads';
 
 
-    // finds and returns instance of user based on email or username
+    // finds and returns instance of ad based on user id
     public static function findItemByUserId($userId)
     {
 
@@ -35,6 +35,9 @@ class Ad extends Model {
 
         return $instance;
     }
+
+    // the following function finds all featured items for the landing page
+    // they will have their featured columns set to "true" or '1'
 
         public static function findFeaturedItem()
     {
