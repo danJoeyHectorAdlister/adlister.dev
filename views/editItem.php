@@ -1,33 +1,39 @@
 <?php
-// require_once __DIR__ . "/../utils/Auth.php";
-// require_once __DIR__ . "/../utils/Input.php";
-// require_once __DIR__ . "/../models/User.php";
-// require_once __DIR__ . "/../models/Ad.php";
+require_once __DIR__ . "/../utils/Auth.php";
+require_once __DIR__ . "/../utils/Input.php";
+require_once __DIR__ . "/../models/User.php";
+require_once __DIR__ . "/../models/Ad.php";
 
 
-// // receives info from form
-// $title = Input::get('title');
-// $price = Input::get('price');
-// $description = Input::get('description');
-// $pic = Input::get('pic');
+// receives info from form
+$title = Input::get('title');
+$price = Input::get('price');
+$description = Input::get('description');
+$pic = Input::get('pic');
+$itemId = $_REQUEST['id'];
+// $ad = Model::find($id);
 
-// findItemByUserId($_SESSION[LOGGED_IN_ID]);
+// findItemByUserId($_SESSION["LOGGED_IN_ID"]);
 
-// // places info from form into User database. Also retrieves user session id. If info does not match current table info, then table is updated
-// if( !empty($title) && !empty($price) && !empty($description) && !empty($pic) ) {
-// 	// $ad = new Ad;
-// 	$ad->title = $title;
-// 	$ad->price = $price;
-// 	$ad->description = $description;
-// 	$ad->pic = $pic;
-// 	// $ad->user_id = $_SESSION['LOGGED_IN_ID'];
-// 	$ad->save();
-// } else {
-// 	// var_dump("Invalid Parameters");
-// }
+// places info from form into User database. Also retrieves user session id. If info does not match current table info, then table is updated
+if( !empty($title) && !empty($price) && !empty($description) && !empty($pic) ) {
+	$ad = new Ad;
+	$ad->title = $title;
+	$ad->price = $price;
+	$ad->description = $description;
+	$ad->pic = $pic;
+	$ad->id = $itemId;
+	$ad->save();
+} else {
+	// var_dump("Invalid Parameters");
+}
 
-// // variables created to represent current user info
-// $user = User::find($_SESSION['LOGGED_IN_ID']);
+// variables created to represent current user info
+$ad = $itemId;
+var_dump($ad);
+// $title = $ad->attributes['title'];
+var_dump($_REQUEST);
+var_dump($_SESSION);
 // $username = $user->attributes['username'];
 // $email = $user->attributes['email'];
 // $name = $user->attributes['name'];
