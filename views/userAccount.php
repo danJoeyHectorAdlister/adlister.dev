@@ -35,12 +35,12 @@ $username = $user->attributes['username'];
 $email = $user->attributes['email'];
 $name = $user->attributes['name'];
 
+// var_dump($_SESSION);
 
 // *************************************** variables created that find item by user ***************************************************************
 
 $ownerOfItem = Auth::id();
 $userItem = Ad::findItemByUserId($ownerOfItem);
-
 ?>
 
 <br><br>
@@ -97,27 +97,28 @@ $userItem = Ad::findItemByUserId($ownerOfItem);
 		<div class="span8 text-center">
 			<h3>Your Ads</h3> 
 
-	<div class="container">
-		<div class="row">
-			<!-- This for each loop loops through all items in db and displays them -->
-			<?php foreach ($userItem->attributes as $attribute=>$value): ?>
-			<div class="col-sm-5">
-				<br>
-			<a href="/show?id=<?= $value['id'] ?>"><img src="<?= $value['image_url']   ?>" height='252' width='302'></a>
 
-			<p> <?= $value['name']; ?> </p>	
-				<p class="featuredItem"><?= $value['description']; ?></p>
-				<p>$<?= $value['price']; ?></p>
-				<br>    
-				<a href="<?= $value['url'] ?>"><?= $value['url'] ?></a>
+			<div class="container">
+				<div class="row centered">
+					<!-- This for each loop loops through all items in db and displays them -->
+					<?php 
+					if(!empty($userItem)):
+						foreach ($userItem->attributes as $attribute=>$value): 
+							?>
+						<center><div class="col-sm-5 userItems">
+							<br>
+							<a href="/show?id=<?= $value['id'] ?>"><img src="<?= $value['image_url']   ?>" height='252' width='302'></a>
+							<p> <?= $value['name']; ?> </p>	
+							<p class="featuredItem"><?= $value['description']; ?></p>
+							<p>$<?= $value['price']; ?></p>
+							<br>    
+							<a href="<?= $value['url'] ?>"><?= $value['url'] ?></a>
+						</div>
+					<?php endforeach; endif;?>                 
+				</div></center>
 			</div>
-		<?php endforeach;?>                 
+		</div>  
 	</div>
-</div>
-
-<button type="button" class="btn btn-primary">Edit Ads</button>
-</div>  
-</div>
 </div>
 
 

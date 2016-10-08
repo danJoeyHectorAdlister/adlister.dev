@@ -39,4 +39,4 @@ if ((!empty($username)) && (!empty($password)))
 		// echo alert dive
 	}
 
-<?
+?>
