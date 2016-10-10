@@ -21,18 +21,29 @@ if ((!empty($username)) && (!empty($password)))
 
 
 <div class="container col-sm-4 col-sm-offset-4">
-	<form method="POST">
-	 <div class="form-group">
-	    <label>Username</label>
-	    <input type="username" name="username" class="form-control" id="InputUsername" placeholder="Username">
-	  </div>	
-	  <div class="form-group">
-	    <label>Password</label>
-	    <input type="password" name="password" class="form-control" id="InputPassword" placeholder="Password">
-	  </div>
-	  <button type="submit" class="btn btn-primary">Submit</button>
-	</form>
+	<h1 class="adForm">Welcome back!</h1>
+	<div>	
+		<form method="POST">
+		 <div class="form-group">
+		    <label>Username</label>
+		    <input type="username" name="username" class="form-control" id="InputUsername" placeholder="Username">
+		  </div>	
+		  <div class="form-group">
+		    <label>Password</label>
+		    <input type="password" name="password" class="form-control" id="InputPassword" placeholder="Password">
+		  </div>
+		  <button type="submit" class="btn btn-primary ">Submit</button>	
+		</form>
+	</div>
 </div>
+
+
+
+
+
+
+
+
 
 <?php
 

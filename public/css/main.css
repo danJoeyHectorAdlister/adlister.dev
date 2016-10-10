@@ -1,25 +1,45 @@
 body { 
-	background-color: #686963;
-    padding-top: 100px; 
+	background-color: #75ABBC;
+    padding-top: 60px; 
 }
 .featuredItem {
 	width:302px;
 }
 .navbar {
 	max-height: 60px;
-	background-color: #D9DADB;
+	/*background-color: #D9DADB;*/
 	padding-bottom: 0px;
 }
 .homeTitle{
-	color: #D9DBCE;
+	
+	color: #071013;
 } 
 .features {
 	color: #871616;
 	/*color: #DB5461;*/
 }
- 
+.pipe {
+	font-size: 16px;
+	font-weight: bold;
+}
+/*.userAccount {
+	padding-top: 500px;
+}*/
+.accountBox {
+	/*max-width: 400px;
+	max-height: 500px;*/
+	margin-top: 100px;	
+}
+.navColor {
+	color: black;
+}
+.adForm {
+	margin-top: 120px;
+}
 
-
+.oneItemDiv {
+	padding-top: 60px;
+}
 
 /*===================================Items CSS==============================*/
 	/*----------image css---------*/
@@ -40,24 +60,26 @@ body {
 		/*border-radius: 10px;*/
 		/*box-shadow: 3px 6px 5px #888888;*/
 	}
-	.description{
-		/*color: #FAFAFA;*/
-
-	}
+	
 	.itemInfo {
 		padding: 5px;
 		max-width: 290px;
-
-
 	}
 	.editThis {
-		background-color: #8AA29E;
+		background-color: #DFE0E2;
 		/*min-height:500px;*/
 		max-height:520px;
 		border-radius: 10px;
 		margin:10px;
 		width: 350px;
 	}
+	.accountGrey {
+		background-color: #DFE0E2;
+		/*min-height:500px;*/
+		max-height:520px;
+		border-radius: 10px;
+		margin:10px;
+		/*max-width: px;	}*/
 
 	/*========= show page css ========*/
 	.showPage {
@@ -80,3 +102,35 @@ body {
 	.userItems {
 		margin-right: 100px;
 	}
+	
+	.row {
+		padding-top: 50px;
+	}
+	/*============= login page =============*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

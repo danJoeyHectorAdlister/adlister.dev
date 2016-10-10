@@ -44,8 +44,9 @@ $userItem = Ad::findItemByUserId($ownerOfItem);
 ?>
 
 <br><br>
-<div class="container well span6 col-sm-4 col-sm-offset-4">
-	<div class="row">
+
+<div class="accountBox container well span6 col-sm-4 col-sm-offset-4">
+	<div class="row userAccount">
 		<div class="span2" >
 		</div>
 		
@@ -94,7 +95,6 @@ $userItem = Ad::findItemByUserId($ownerOfItem);
 			</div>
 		</div>
 		<div class="span8 text-center">
-			<h3>Your Ads</h3> 
 
 
 			<div class="container">
@@ -105,7 +105,8 @@ $userItem = Ad::findItemByUserId($ownerOfItem);
 						foreach ($userItem->attributes as $attribute=>$value): 
 							?>
 						<center><div class="col-sm-5 userItems">
-							<br>
+							<br>s
+							<h3>Your Ads</h3> 
 							<a href="/show?id=<?= $value['id'] ?>"><img src="<?= $value['image_url']   ?>" height='252' width='302'></a>
 							<p> <?= $value['name']; ?> </p>	
 							<p class="featuredItem"><?= $value['description']; ?></p>
@@ -118,6 +119,13 @@ $userItem = Ad::findItemByUserId($ownerOfItem);
 			</div>
 		</div>  
 	</div>
+</div>
+
+
+
+<div>
+
+
 </div>
 
 
