@@ -104,7 +104,7 @@ $userItem = Ad::findItemByUserId($ownerOfItem);
 					if(!empty($userItem)):
 						foreach ($userItem->attributes as $attribute=>$value): 
 							?>
-						<center><div class="col-sm-5 userItems">
+						<center><div class="col-sm-8 userItems">
 							<br>s
 							<h3>Your Ads</h3> 
 							<a href="/show?id=<?= $value['id'] ?>"><img src="<?= $value['image_url']   ?>" height='252' width='302'></a>
