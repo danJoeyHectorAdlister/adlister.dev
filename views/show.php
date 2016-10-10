@@ -36,6 +36,7 @@ since only one item can be clicked on at a time it will always only be one -->
                 <br>    
                 <a href="<?= $ad->url ?>"><?= $ad->url ?></a>
             </div>
+
         </div>
 <?php if ($conditionForDeleteUser): ?>
 
@@ -59,6 +60,7 @@ since only one item can be clicked on at a time it will always only be one -->
 <?php endif; ?>
         </div>
         </div>
+        <button class="btn btn-default col-sm-offset-7" type="submit">Buy Me</button>
 
     </div>
 
