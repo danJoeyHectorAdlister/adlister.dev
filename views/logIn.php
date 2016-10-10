@@ -15,6 +15,7 @@ if ((!empty($username)) && (!empty($password)))
 		die;
 	} else {
 		$alertVar = 1;
+		// echo "Invalid";
 	}
 ?>
 
