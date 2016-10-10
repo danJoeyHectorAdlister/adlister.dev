@@ -48,9 +48,10 @@ ads attributes -->
 
 
 <div class="container col-sm-4 col-sm-offset-4">
+	<h1 class="adForm">Create new Ad.</h1>
 	<form method="POST" enctype="multipart/form-data">	
 		<div class="form-group">
-			<input  class="form-control" placeholder="Name" name="name">
+			<input  class="form-control" placeholder="Title" name="name">
 		</div>
 		<div class="form-group">
 			<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
@@ -68,4 +69,17 @@ ads attributes -->
   		<br>
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+

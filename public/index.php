@@ -20,7 +20,7 @@ require_once __DIR__ . '/../models/User.php';
 <!DOCTYPE html>
 <html>
 <head>
-    <title>OooLister</title>
+    <title>Take my money!</title>
     <?php require '../views/partials/head.php'; ?>
 </head>
 <body>
