@@ -114,6 +114,7 @@ $userItem = Ad::findItemByUserId($ownerOfItem);
 							<br>    
 							<a href="<?= $value['url'] ?>"><?= $value['url'] ?></a>
 						</div>
+				</div>
 					<?php endforeach; endif;?>                 
 				</div></center>
 			</div>
