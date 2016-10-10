@@ -24,6 +24,7 @@ if( (!empty($name) && !empty($username) && !empty($email) && !empty($password) &
 
 
 <div class="container col-sm-4 col-sm-offset-4">
+	<h1 class="adForm">Create an account!</h1>
 	<form method="POST">
 		<div class="form-group">
 			<label>Name</label>

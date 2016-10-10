@@ -18,8 +18,15 @@ $ads = Ad::all();
 
 
  <div class="container">
-     <div class="row">
+    <h1 class="animated flipInX homeTitle">SHUT UP AND TAKE MY MONEY!!!</h1>
+    <div class="row">
     
+
+        
+            
+            <!-- Placeholder for featured items.-->
+
+        
  
 <!-- This for each loop loops through all items in db and displays them -->
 
@@ -47,7 +54,6 @@ $ads = Ad::all();
         <?php endforeach;?>
         <br>
         <br>
-
 
 
 

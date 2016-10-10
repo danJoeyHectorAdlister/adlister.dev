@@ -7,7 +7,7 @@
 
 
 
- <nav id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="navbar navbar-default navbar-fixed-top" role="navigation">
+ <nav id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">

@@ -23,21 +23,20 @@ $conditionForDeleteUser = isset($_SESSION['LOGGED_IN_ID'])
 ?>
 
  <div class="container">
-     <div class="row">
+     <div class="row col-sm-4 col-sm-offset-4 oneItemDiv">
     
 <!-- This for each loop will go through all items with id and display them
 since only one item can be clicked on at a time it will always only be one -->
- 
-        <div class="col-sm-4 col-sm-offset-4 showPage">
+        <div class="oneItem editThis container">
             <img class="shadow" src="<?= $ad->image_url   ?>" height='252' width='302'>
             <div class="showBox">
-                <p><?= $ad->name; ?></p>
+                <h4><?= $ad->name; ?></h4>
                 <p class="featuredItem"><?= $ad->description ?></p>
-                <p>$<?= $ad->price; ?></p>
+                <h5>$<?= $ad->price; ?></h5>
                 <br>    
                 <a href="<?= $ad->url ?>"><?= $ad->url ?></a>
             </div>
-
+        </div>
 <?php if ($conditionForDeleteUser): ?>
 
             <form method="POST">
@@ -45,6 +44,7 @@ since only one item can be clicked on at a time it will always only be one -->
                 <input name="ad_delete" type="hidden" value="<?= $_REQUEST['id'] ?>">
 
                 <button type="submit" class="btn btn-primary">Delete</button>
+                <br>
 
             </form>
 
@@ -53,8 +53,8 @@ since only one item can be clicked on at a time it will always only be one -->
 
 
 <?php if ($conditionForDeleteUser): ?>
-               
-                <a href="http://adlister.dev/editItem?id=<?= $ad->id ?>">Edit</a>
+                <br>
+                <a href="http://adlister.dev/editItem?id=<?= $ad->id ?>"><button class="btn btn-primary">Edit</button></a>
 
 <?php endif; ?>
         </div>
