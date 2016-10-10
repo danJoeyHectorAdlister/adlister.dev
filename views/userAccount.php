@@ -48,7 +48,6 @@ $userItem = Ad::findItemByUserId($ownerOfItem);
 <div class="accountBox container well span6 col-sm-4 col-sm-offset-4">
 	<div class="row userAccount">
 		<div class="span2" >
-			<!-- <img src="https://secure.gravatar.com/avatar/de9b11d0f9c0569ba917393ed5e5b3ab?s=140&r=g&d=mm" class="img-circle"> -->
 		</div>
 		
 		<div class="span8 text-center">
