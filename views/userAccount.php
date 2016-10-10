@@ -105,7 +105,7 @@ $userItem = Ad::findItemByUserId($ownerOfItem);
 						foreach ($userItem->attributes as $attribute=>$value): 
 							?>
 						<center><div class="col-sm-5 userItems">
-							<br>s
+							<br>
 							<h3>Your Ads</h3> 
 							<a href="/show?id=<?= $value['id'] ?>"><img src="<?= $value['image_url']   ?>" height='252' width='302'></a>
 							<p> <?= $value['name']; ?> </p>	
@@ -114,6 +114,7 @@ $userItem = Ad::findItemByUserId($ownerOfItem);
 							<br>    
 							<a href="<?= $value['url'] ?>"><?= $value['url'] ?></a>
 						</div>
+				</div>
 					<?php endforeach; endif;?>                 
 				</div></center>
 			</div>
